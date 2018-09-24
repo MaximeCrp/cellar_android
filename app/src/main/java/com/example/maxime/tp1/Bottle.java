@@ -13,4 +13,8 @@ public class Bottle {
     public String getName() {
         return name;
     }
+
+    public Integer getPrice() {
+        return price;
+    }
 }
