@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new AdapterBottles(mainCellar.getList());
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter); //test git server
 
         Button btn = findViewById(R.id.btnCreate);
         btn.setOnClickListener(new View.OnClickListener()
