@@ -1,11 +1,13 @@
 package com.example.maxime.tp1;
 
-public class Bottle {
+import java.io.Serializable;
+
+public class Bottle implements Serializable{
 
     private String name;
-    private Integer price;
+    private float price;
 
-    Bottle(String nm, Integer pr) {
+    Bottle(String nm, float pr) {
         name = nm;
         price = pr;
     }
@@ -14,7 +16,11 @@ public class Bottle {
         return name;
     }
 
-    public Integer getPrice() {
+    public String toString() {
+        return this.name + " " + Float.toString(this.price);
+    }
+
+    public float getPrice() {
         return price;
     }
 }

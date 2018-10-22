@@ -16,18 +16,22 @@ public class Cellar {
         bottleList.add(newBottle);
     }
 
+    public void addBottle(Bottle bottle) {
+        Bottle newBottle = bottle;
+        bottleList.add(newBottle);
+    }
+
     public Bottle getBottle(String name) {
         for (Bottle currentBottle : bottleList) {
             if (currentBottle.getName() == name) {
                 return currentBottle;
-            } else {
-                return null;
             }
         }
+        return null;
     }
 
     public float getTotalPriceInEuros() {
-        Integer priceSum;
+        float priceSum;
         priceSum = 0;
         for (Bottle currentBottle : bottleList) {
             priceSum += currentBottle.getPrice();
@@ -48,6 +52,8 @@ public class Cellar {
         }
         return sumNb;
     }
+
+    public ArrayList<Bottle> getList() { return bottleList; }
 
 
 }
